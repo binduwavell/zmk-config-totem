@@ -98,9 +98,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-     &kp V  &kp W  &kp G  &kp M  &kp J        &kp K      &kp MINUS  &kp DOT  &kp EQUAL  &kp Z
+     &kp V  &kp W  &kp G  &kp M  &kp J        &kp K      &kp MINUS  &kp DOT  &kp EQUAL  &kp B
      &kp S  &kp N  &kp T  &kp H  &kp X        &kp COMMA  &kp A      &kp E    &kp I      &kp C
-&qu  &kp P  &kp F  &kp D  &kp L  &none        &kp B      &kp U      &kp O    &kp Y      &kp FSLH  &kp SQT
+&qu  &kp P  &kp F  &kp D  &kp L  &none        &kp B      &kp U      &kp O    &kp Y      &kp FSLH  &kp Z
                    &mo 1  &kp R  &kp LSHFT    &kp BSPC   &kp SPACE  &mo 2
             >;
         };
