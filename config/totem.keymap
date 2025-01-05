@@ -53,6 +53,27 @@
 
             label = "QU";
         };
+
+        pars: pars {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            label = "PARS";
+        };
+
+        brcs: brcs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT_ARROW>;
+            label = "BRCS";
+        };
+
+        bkts: brks {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT_ARROW>;
+            label = "BRKS";
+        };
     };
 
     keymap {
@@ -103,10 +124,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                               &trans    &trans     &trans      &mo 3     &kp KP_N0  &trans
+        &kp Q      &kp LC(W)  &kp LC(F)  &kp LC(P)  &kp LBRC    &kp RBRC  &none          &none             &none      &none
+        &kp LC(A)  &kp W      &kp G      &kp LC(E)  &kp LPAR    &kp RPAR  &pars          &brcs             &bkts      &kp TILDE
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LBKT    &kp RBKT  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp BSLH   &kp GRAVE
+                              &trans     &trans     &trans      &trans    &trans         &trans
             >;
         };
 
