@@ -45,6 +45,12 @@
             key-positions = <37 33>;
             layers = <0>;
         };
+
+        settings_combo {
+            bindings = <&sl 4>;
+            key-positions = <32 37>;
+            layers = <0 4>;
+        };
     };
 
     macros {
@@ -107,7 +113,7 @@
             bindings = <
      &kp V  &kp W  &kp G  &kp M  &kp J        &kp K      &kp MINUS  &kp DOT  &kp EQUAL  &kp B
      &kp S  &kp N  &kp T  &kp H  &kp X        &kp COMMA  &kp A      &kp E    &kp I      &kp C
-&qu  &kp P  &kp F  &kp D  &kp L  &none        &kp B      &kp U      &kp O    &kp Y      &kp FSLH  &kp Z
+&qu  &kp P  &kp F  &kp D  &kp L  &mo 3        &kp B      &kp U      &kp O    &kp Y      &kp FSLH  &kp Z
                    &mo 1  &kp R  &kp LSHFT    &kp BSPC   &kp SPACE  &mo 2
             >;
         };
