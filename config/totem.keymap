@@ -152,9 +152,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &sk LGUI         &sk LALT     &sk LCTRL  &sk LSHFT   &trans    &trans  &sk RSHFT  &sk RCTRL      &sk RALT      &sk RGUI
-        &kp N8           &kp N7       &kp N6     &kp N5      &trans    &kp N0  &kp N1     &kp N2         &kp N3        &kp N4
-&kp N9  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &trans    &trans  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp PERCENT  &kp DOT
+        &sk LGUI         &sk LALT     &sk LCTRL  &sk LSHFT   &none     &none   &sk RSHFT  &sk RCTRL      &sk RALT      &sk RGUI
+        &kp N8           &kp N7       &kp N6     &kp N5      &none     &kp N0  &kp N1     &kp N2         &kp N3        &kp N4
+&kp N9  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &none     &none   &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp PERCENT  &kp DOT
                                       &trans     &trans      &trans    &trans  &trans     &trans
             >;
         };
