@@ -35,13 +35,13 @@
 
         combo_left {
             bindings = <&kp LEFT>;
-            key-positions = <34 35>;
+            key-positions = <35 33>;
             layers = <0>;
         };
 
         combo_right {
             bindings = <&kp RIGHT>;
-            key-positions = <34 37>;
+            key-positions = <37 33>;
             layers = <0>;
         };
     };
