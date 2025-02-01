@@ -89,6 +89,16 @@
             bindings = <&kp ENTER>;
             key-positions = <36 37>;
         };
+
+        combo_ou {
+            bindings = <&ou>;
+            key-positions = <27 28>;
+        };
+
+        combo_dl {
+            bindings = <&ld>;
+            key-positions = <23 24>;
+        };
     };
 
     macros {
@@ -158,6 +168,32 @@
 
             label = "GH";
         };
+
+        ou: ou {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp O>,
+                <&macro_release>,
+                <&kp LSHIFT &kp RSHIFT>,
+                <&macro_press>,
+                <&kp H>;
+
+            label = "OU";
+        };
+
+        ld: ld {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp L>,
+                <&macro_release>,
+                <&kp LSHIFT &kp RSHIFT>,
+                <&macro_press>,
+                <&kp D>;
+
+            label = "LD";
+        };
     };
 
     keymap {
@@ -185,7 +221,7 @@
      &kp V  &kp W  &kp G  &kp M       &kp J    &kp K      &kp MINUS  &kp DOT  &kp EQUAL  &kp B
      &kp S  &kp N  &kp T  &kp H       &kp X    &kp COMMA  &kp A      &kp E    &kp I      &kp C
 &qu  &kp P  &kp F  &kp D  &kp L       &mo 3    &kp B      &kp U      &kp O    &kp Y      &kp FSLH  &kp Z
-                   &mo 2  &kp LSHIFT  &kp R    &kp BSPC   &kp SPACE  &mo 1
+                   &mo 2  &kp LSHIFT  &kp R    &kp SPACE  &kp BSPC   &mo 1
             >;
         };
 
