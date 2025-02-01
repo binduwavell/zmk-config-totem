@@ -172,7 +172,7 @@
                 <&macro_release>,
                 <&kp LSHIFT &kp RSHIFT>,
                 <&macro_tap>,
-                <&kp H>;
+                <&kp U>;
 
             label = "OU";
         };
