@@ -68,6 +68,7 @@
         combo_ing {
             bindings = <&ing>;
             key-positions = <18 19>;
+            layers = <0>;
         };
 
         combo_gh {
@@ -98,6 +99,12 @@
         combo_dl {
             bindings = <&ld>;
             key-positions = <23 24>;
+        };
+
+        combo_you {
+            bindings = <&you>;
+            key-positions = <27 28 29>;
+            layers = <0>;
         };
     };
 
@@ -193,6 +200,19 @@
                 <&kp D>;
 
             label = "LD";
+        };
+
+        you: you {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp Y>,
+                <&macro_release>,
+                <&kp LSHIFT &kp RSHIFT>,
+                <&macro_press>,
+                <&kp O &kp U>;
+
+            label = "YOU";
         };
     };
 
