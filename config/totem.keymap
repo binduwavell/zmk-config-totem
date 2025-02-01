@@ -84,6 +84,11 @@
             bindings = <&kp LS(R)>;
             key-positions = <33 34>;
         };
+
+        combo_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <36 37>;
+        };
     };
 
     macros {
