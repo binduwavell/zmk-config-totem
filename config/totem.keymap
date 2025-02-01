@@ -52,6 +52,33 @@
             key-positions = <32 37>;
             layers = <0 4>;
         };
+
+        combo_nav {
+            bindings = <&mo 3>;
+            key-positions = <32 33>;
+            layers = <0>;
+        };
+
+        combo_th {
+            bindings = <&th>;
+            key-positions = <12 13>;
+            layers = <0>;
+        };
+
+        combo_ing {
+            bindings = <&ing>;
+            key-positions = <18 19>;
+        };
+
+        combo_gh {
+            bindings = <&gh>;
+            key-positions = <2 3>;
+        };
+
+        combo_quote {
+            bindings = <&kp APOS>;
+            key-positions = <9 19>;
+        };
     };
 
     macros {
@@ -88,6 +115,39 @@
             bindings = <&kp LBKT &kp RBKT &kp LEFT_ARROW>;
             label = "BRKS";
         };
+
+        th: th {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp T>,
+                <&macro_release>,
+                <&kp LSHIFT &kp RSHIFT>,
+                <&macro_press>,
+                <&kp H>;
+
+            label = "TH";
+        };
+
+        ing: ing {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp N &kp G>;
+            label = "ING";
+        };
+
+        gh: gh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp G>,
+                <&macro_release>,
+                <&kp LSHIFT &kp RSHIFT>,
+                <&macro_press>,
+                <&kp H>;
+
+            label = "GH";
+        };
     };
 
     keymap {
@@ -115,7 +175,7 @@
      &kp V  &kp W  &kp G  &kp M  &kp J        &kp K      &kp MINUS  &kp DOT  &kp EQUAL  &kp B
      &kp S  &kp N  &kp T  &kp H  &kp X        &kp COMMA  &kp A      &kp E    &kp I      &kp C
 &qu  &kp P  &kp F  &kp D  &kp L  &mo 3        &kp B      &kp U      &kp O    &kp Y      &kp FSLH  &kp Z
-                   &mo 1  &kp R  &kp LSHFT    &kp BSPC   &kp SPACE  &mo 2
+                   &mo 2  &kp R  &kp LSHFT    &kp BSPC   &kp SPACE  &mo 1
             >;
         };
 
