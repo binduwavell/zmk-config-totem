@@ -205,19 +205,19 @@
     };
 
     behaviors {
-        spcleft: spcleft {
+        spcright: spcright {
             compatible = "zmk,behavior-mod-morph";
-            label = "SPCLEFT";
-            bindings = <&kp SPACE>, <&kp LEFT>;
+            label = "SPCRIGHT";
+            bindings = <&kp SPACE>, <&kp RIGHT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        bspcright: bspcright {
+        bspcleft: bspcleft {
             compatible = "zmk,behavior-mod-morph";
-            label = "BSPCRIGHT";
-            bindings = <&kp BACKSPACE>, <&kp RIGHT>;
+            label = "BSPCLEFT";
+            bindings = <&kp BACKSPACE>, <&kp LEFT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -265,10 +265,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-     &kp V  &kp W  &kp G  &kp M       &kp J    &kp K       &kp MINUS   &dotcolon  &kp EQUAL  &kp B
-     &kp S  &kp N  &kp T  &kp H       &kp X    &commasemi  &kp A       &kp E      &kp I      &kp C
-&qu  &kp P  &kp F  &kp D  &kp L       &mo 3    &kp B       &kp U       &kp O      &kp Y      &kp FSLH  &kp Z
-                   &mo 2  &kp LSHIFT  &kp R    &spcleft    &bspcright  &mo 1
+     &kp V  &kp W  &kp G  &kp M  &kp J         &kp K       &kp MINUS  &dotcolon  &kp EQUAL  &kp B
+     &kp S  &kp N  &kp T  &kp H  &kp X         &commasemi  &kp A      &kp E      &kp I      &kp C
+&qu  &kp P  &kp F  &kp D  &kp L  &mo 3         &kp B       &kp U      &kp O      &kp Y      &kp FSLH  &kp Z
+                   &mo 2  &kp R  &kp RSHIFT    &bspcleft   &spcright  &mo 1
             >;
         };
 
@@ -289,10 +289,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &none      &kp LC(W)  &kp LC(F)  &kp LC(P)  &kp LBRC    &kp RBRC  &none          &none             &none      &none
-       &kp LC(A)  &kp W      &kp G      &kp LC(E)  &kp LPAR    &kp RPAR  &pars          &brcs             &bkts      &kp TILDE
-&kp Q  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LBKT    &kp RBKT  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp BSLH   &kp GRAVE
-                             &trans     &trans     &trans      &trans    &trans         &trans
+       &none      &kp LC(W)  &kp LC(F)  &kp LC(P)    &kp LBRC    &kp RBRC  &none          &none             &none      &none
+       &kp LC(A)  &kp W      &kp G      &kp LC(E)    &kp LPAR    &kp RPAR  &pars          &brcs             &bkts      &kp TILDE
+&kp Q  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)    &kp LBKT    &kp RBKT  &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL  &kp BSLH   &kp GRAVE
+                             &kp ESC    &kp LC(TAB)  &kp TAB     &trans    &trans         &trans
             >;
         };
 
@@ -326,7 +326,7 @@
        &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &none       &none     &sk RSHFT      &sk RCTRL    &sk RALT        &sk RGUI
        &none     &none     &mkp MB1   &mkp MB2   &mkp MB3    &kp HOME  &kp DOWN       &kp UP       &kp END         &mmv MOVE_UP
 &none  &none     &none     &none      &none      &none       &none     &kp PAGE_DOWN  &kp PAGE_UP  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
-                           &trans     &trans     &trans      &kp LEFT  &trans         &kp RIGHT
+                           &trans     &trans     &trans      &kp LEFT  &kp RIGHT      &trans
             >;
         };
 
