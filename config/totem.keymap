@@ -114,6 +114,16 @@
             bindings = <&kp ENTER>;
             key-positions = <16 17 18 19>;
         };
+
+        combo_exclamation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <0 10>;
+        };
+
+        combo_v {
+            bindings = <&kp V>;
+            key-positions = <10 11>;
+        };
     };
 
     macros {
