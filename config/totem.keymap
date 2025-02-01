@@ -110,7 +110,7 @@
             key-positions = <15 16>;
         };
 
-        combo_enter {
+        combo_hr_enter {
             bindings = <&kp ENTER>;
             key-positions = <16 17 18 19>;
         };
