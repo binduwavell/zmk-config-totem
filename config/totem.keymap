@@ -246,6 +246,25 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        dotcolon: dotcolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOTCOLON";
+            bindings = <&kp DOT>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        commasemi: commasemi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMASEMI";
+            bindings = <&kp COMMA>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -270,10 +289,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-     &kp V  &kp W  &kp G  &kp M       &kp J    &kp K      &kp MINUS   &kp DOT  &kp EQUAL  &kp B
-     &kp S  &kp N  &kp T  &kp H       &kp X    &kp COMMA  &kp A       &kp E    &kp I      &kp C
-&qu  &kp P  &kp F  &kp D  &kp L       &mo 3    &kp B      &kp U       &kp O    &kp Y      &kp FSLH  &kp Z
-                   &mo 2  &kp LSHIFT  &kp R    &spcleft   &bspcright  &mo 1
+     &kp V  &kp W  &kp G  &kp M       &kp J    &kp K       &kp MINUS   &dotcolon  &kp EQUAL  &kp B
+     &kp S  &kp N  &kp T  &kp H       &kp X    &commasemi  &kp A       &kp E      &kp I      &kp C
+&qu  &kp P  &kp F  &kp D  &kp L       &mo 3    &kp B       &kp U       &kp O      &kp Y      &kp FSLH  &kp Z
+                   &mo 2  &kp LSHIFT  &kp R    &spcleft    &bspcright  &mo 1
             >;
         };
 
