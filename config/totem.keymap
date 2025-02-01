@@ -94,6 +94,11 @@
             key-positions = <27 28 29>;
             layers = <0>;
         };
+
+        combo_and {
+            bindings = <&and>;
+            key-positions = <16 11 12>;
+        };
     };
 
     macros {
@@ -201,6 +206,13 @@
                 <&kp O &kp U>;
 
             label = "YOU";
+        };
+
+        and: and {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp N &kp D>;
+            label = "AND";
         };
     };
 
