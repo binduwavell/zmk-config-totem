@@ -35,18 +35,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_left {
-            bindings = <&kp LEFT>;
-            key-positions = <35 33>;
-            layers = <0>;
-        };
-
-        combo_right {
-            bindings = <&kp RIGHT>;
-            key-positions = <37 33>;
-            layers = <0>;
-        };
-
         settings_combo {
             bindings = <&sl 4>;
             key-positions = <32 37>;
@@ -214,6 +202,50 @@
 
             label = "YOU";
         };
+
+        unleft: unleft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release>,
+                <&kp LSHIFT &kp RSHIFT>,
+                <&macro_press>,
+                <&kp LEFT>;
+
+            label = "UNLEFT";
+        };
+
+        unright: unright {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release>,
+                <&kp LSHIFT &kp RSHIFT>,
+                <&macro_press>,
+                <&kp RIGHT>;
+
+            label = "UNRIGHT";
+        };
+    };
+
+    behaviors {
+        spcleft: spcleft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPCLEFT";
+            bindings = <&kp SPACE>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        bspcright: bspcright {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSPCRIGHT";
+            bindings = <&kp BACKSPACE>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -238,10 +270,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-     &kp V  &kp W  &kp G  &kp M       &kp J    &kp K      &kp MINUS  &kp DOT  &kp EQUAL  &kp B
-     &kp S  &kp N  &kp T  &kp H       &kp X    &kp COMMA  &kp A      &kp E    &kp I      &kp C
-&qu  &kp P  &kp F  &kp D  &kp L       &mo 3    &kp B      &kp U      &kp O    &kp Y      &kp FSLH  &kp Z
-                   &mo 2  &kp LSHIFT  &kp R    &kp SPACE  &kp BSPC   &mo 1
+     &kp V  &kp W  &kp G  &kp M       &kp J    &kp K      &kp MINUS   &kp DOT  &kp EQUAL  &kp B
+     &kp S  &kp N  &kp T  &kp H       &kp X    &kp COMMA  &kp A       &kp E    &kp I      &kp C
+&qu  &kp P  &kp F  &kp D  &kp L       &mo 3    &kp B      &kp U       &kp O    &kp Y      &kp FSLH  &kp Z
+                   &mo 2  &kp LSHIFT  &kp R    &spcleft   &bspcright  &mo 1
             >;
         };
 
