@@ -99,6 +99,21 @@
             bindings = <&and>;
             key-positions = <16 11 12>;
         };
+
+        combo_j {
+            bindings = <&kp J>;
+            key-positions = <13 14>;
+        };
+
+        combo_k {
+            bindings = <&kp K>;
+            key-positions = <15 16>;
+        };
+
+        combo_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <16 17 18 19>;
+        };
     };
 
     macros {
